@@ -1,0 +1,108 @@
+﻿@model crudDatosPersonales.Models.datosPersonales
+
+@{
+    ViewBag.Title = "Delete";
+}
+<center>
+    <h2>Eliminar datos</h2>
+
+    <h3>Estas seguro que quieres eliminarlo?</h3>
+</center>
+<div>
+    <br />
+    <hr />
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <table class="table table-hover">
+                    <tbody style="background: rgba(243, 25, 25, 0.30); border: 1px solid rgba(200, 100, 0, 0.3);">
+                        <tr>
+                            <th scope="row">@Html.DisplayNameFor(model => model.Nombre)</th>
+                            <td><center> @Html.DisplayFor(model => model.Nombre)</center></td>
+                        </tr>
+                    </tbody>
+                    <tbody style="background: rgba(243, 25, 25, 0.30); border: 1px solid rgba(200, 100, 0, 0.3);">
+                        <tr>
+                            <th scope="row">@Html.DisplayNameFor(model => model.Apellido)</th>
+                            <td><center>@Html.DisplayFor(model => model.Apellido)</center></td>
+                        </tr>
+                    </tbody>
+                    <tbody style="background: rgba(243, 25, 25, 0.30); border: 1px solid rgba(200, 100, 0, 0.3);">
+                        <tr>
+                            <th scope="row">@Html.DisplayNameFor(model => model.Direccion)</th>
+                            <td><center>@Html.DisplayFor(model => model.Direccion)</center></td>
+                        </tr>
+                    </tbody>
+                    <tbody style="background: rgba(243, 25, 25, 0.30); border: 1px solid rgba(200, 100, 0, 0.3);">
+                        <tr>
+                            <th scope="col">@Html.DisplayNameFor(model => model.Email)</th>
+                            <td><center>@Html.DisplayFor(model => model.Email)</center></td>
+                        </tr>
+                    </tbody>
+                    <tbody style="background: rgba(243, 25, 25, 0.30); border: 1px solid rgba(200, 100, 0, 0.3);">
+                        <tr>
+                            <th scope="col">@Html.DisplayNameFor(model => model.Telefono)</th>
+                            <td><center>@Html.DisplayFor(model => model.Telefono)</center></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+    </div>
+    @*<dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Nombre)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Apellido)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Direccion)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Direccion)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Telefono)
+            </dd>
+
+        </dl>*@
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+    <center>
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar a la lista", "Index")
+        </div>
+    </center>
+    }
+</div>
